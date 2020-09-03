@@ -18,6 +18,7 @@
         $link->rollback();
     }
 ?>
+
 <script>
     alert("성공적으로 장바구니에서 제거되었습니다.");
     location.href = "basket_list.php";
