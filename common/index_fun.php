@@ -2,9 +2,10 @@
     function latest_article($table, $loop, $char_limit){
         require_once './common/MyDB.php';
         $pdo= db_connect();
+        $db_name = db_name();
         
         try{
-            $sql= "select * from shhanphp.$table order by num desc limit $loop";
+            $sql= "select * from $db_name.$table order by num desc limit $loop";
             $stmh=$pdo->query($sql);
             echo ("
                     자유게시판

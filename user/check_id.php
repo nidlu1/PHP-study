@@ -11,7 +11,7 @@
 
        try
        {
-          $sql = "select * from shhanphp.shhan_user where id = ?";
+          $sql = "select * from $db_name.shhan_user where id = ?";
           $stmh = $pdo->prepare($sql); 
           $stmh->bindValue(1,$id,PDO::PARAM_STR); 
           $stmh->execute(); 

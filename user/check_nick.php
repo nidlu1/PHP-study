@@ -8,10 +8,10 @@
     {
         require_once("../common/MyDB.php"); 
         $pdo = db_connect(); 
-
+        $db_name = db_name();
        try
        {
-          $sql = "select * from shhanphp.shhan_user where nick = ?";
+          $sql = "select * from $db_name.shhan_user where nick = ?";
           $stmh = $pdo->prepare($sql); 
           $stmh->bindValue(1,$nick,PDO::PARAM_STR); 
           $stmh->execute(); 
