@@ -1,9 +1,9 @@
 <?php
 function db_connect(){
-    $db_user = "sh";
-    $db_pass = "1234";
-    $db_host = "localhost";
-    $db_name = db_name();
+    $db_user = "shhan1"; //local: sh, cafe24: 
+    $db_pass = "tkdghkdqud2@"; //local: 1234, cafe24: 
+    $db_host = "localhost"; //local: localhost, cafe24: localhost
+    $db_name = db_name(); 
     $db_type = "mysql";
     $dsn="$db_type:host=$db_host;dbname=$db_name;charset=utf8";
 
