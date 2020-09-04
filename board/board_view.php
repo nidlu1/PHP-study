@@ -2,7 +2,7 @@
     session_start();
     
 //    $file_dir = 'C:\xampp\htdocs\shhan\data\\';
-    $file_dir = '/shhan1/www/data\\';
+    $file_dir = '../data/';
 
     $num=$_REQUEST["num"];
     $page=$_REQUEST["page"];   //페이지번호

@@ -60,7 +60,9 @@
         return;
     }
     function check_id(){
+        if($mode!="modify"){
         window.open("check_id.php?id="+document.shhan_user.id.value,"IDcheck", "left=200,top=200,width=200,height=60,scrollbars=no,resizable=yes");
+        }
         id_check = "y";
     } 
     function check_nick(){

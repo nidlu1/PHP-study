@@ -9,7 +9,6 @@
     unset($_SESSION["cash"]);
     unset($_SESSION["mileage"]);  
     
-    header("Location:http://localhost/shhan/index.php");
 ?>
 <script>
     location.href = "../index.php";
