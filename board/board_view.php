@@ -105,12 +105,12 @@
                             $img_height[$i] = $img_info[1];
                             $img_type[$i] = $img_info[2];
                             $img_name = $image_copied[$i];
-                            $img_name = "../data/".$img_name;
+                            $img_name = "C:\xampp\htdocs\shhan\data\\".$img_name;
                             
                             if($img_width[$i] > 785)
                                 $img_width[$i] = 785;
                             if($img_type[$i]==1 || $img_type[$i]==2 || $img_type[$i]==3){
-                                print "<img src='$img_name' width='$img_width[$i]'><br><br>";
+                                print "<img src='./$img_name' width='$img_width[$i]'><br>1<br>";
                             }
                         }
                     }

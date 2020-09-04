@@ -172,9 +172,9 @@
                             if($prev_page <= 0) 
                                 $prev_page = 1;  // 만약 감소한 값이 0보다 작거나 같으면 1로 고정
                             if($mode=="search")
-                                print "<a href=.php?page=$prev_page&mode=search&search=$search>◀ </a>";
+                                print "<a href=shop_list.php?page=$prev_page&mode=search&search=$search>◀ </a>";
                             else
-                                print "<a href=.php?page=$prev_page>◀ </a>";
+                                print "<a href=shop_list.php?page=$prev_page>◀ </a>";
                         }
                         
                         for($i=$start_page; $i<=$end_page && $i<= $total_page; $i++) {        // [1][2][3] 페이지 번호 목록 출력
@@ -182,18 +182,18 @@
                                 print "<font color=red><b>[$i]</b></font>"; 
                             else
                                 if($mode=="search")
-                                    print "<a href=.php?page=$i&mode=search&search=$search>[$i]</a>";
+                                    print "<a href=shop_list.php?page=$i&mode=search&search=$search>[$i]</a>";
                                 else
-                                    print "<a href=.php?page=$i>[$i]</a>";
+                                    print "<a href=shop_list.php?page=$i>[$i]</a>";
                         }
                         
                         if($page<$total_page){
                             if($next_page > $total_page) 
                                 $next_page = $total_page; // netx_page 값이 전체 페이지수 보다 크면 맨 뒤 페이지로 이동시킴
                             if($mode=="search")
-                                print "<a href=.php?page=$next_page&mode=search&search=$search> ▶</a><p>";
+                                print "<a href=shop_list.php?page=$next_page&mode=search&search=$search> ▶</a><p>";
                             else
-                                print "<a href=.php?page=$next_page> ▶</a><p>";
+                                print "<a href=shop_list.php?page=$next_page> ▶</a><p>";
                         }  
                     ?>
                         <!--[1][2][3]-->
