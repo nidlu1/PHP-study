@@ -1,8 +1,9 @@
 <?php
     session_start();
     
-    $file_dir = 'C:\xampp\htdocs\shhan\data\\';
-    
+//    $file_dir = 'C:\xampp\htdocs\shhan\data\\';
+    $file_dir = '/shhan1/www/data\\';
+
     $num=$_REQUEST["num"];
     $page=$_REQUEST["page"];   //페이지번호
     
@@ -81,7 +82,7 @@
     <!--border:solid 1px #FF0000-->
     <div id="wrap">
         <div id="header">
-            <div style="margin-right: 500px"><a href="http://localhost/shhan/index.php"><h1>쇼핑몰 프로젝트</h1></a></div> 
+            <div style="margin-right: 500px"><a href="../index.php"><h1>쇼핑몰 프로젝트</h1></a></div> 
             <div>
                 <?php include '../common/top_login.php'; ?>
             </div>

@@ -109,5 +109,5 @@ else{
 ?>
     <script>
         alert("상품이 수정되었습니다");
-//        location.href = "shop_list.php";
+        location.href = "shop_list.php";
     </script>

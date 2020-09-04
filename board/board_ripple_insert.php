@@ -28,7 +28,11 @@
         $stmh->execute();
         $pdo->commit(); 
 
-        header("Location:http://localhost/shhan/board/board_view.php?num=$num&page=$page");
+        ?>
+            <script>
+               location.href = "./board_view.php?num=<?=$num?>&page=<?=$page?>";               
+           </script>
+    <?php
     }
     catch (PDOException $Exception) {
         $pdo->rollBack();

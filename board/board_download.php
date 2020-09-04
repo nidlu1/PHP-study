@@ -15,7 +15,8 @@
     $show_name=$_REQUEST["show_name"];
     $file_type=$_REQUEST["file_type"];
  
-    $upload_dir = 'C:\xampp\htdocs\shhan\data\\';   //물리적 저장위치   
+//    $upload_dir = 'C:\xampp\htdocs\shhan\data\\';   //물리적 저장위치   
+    $upload_dir = '/shhan1/www/data\\';   //물리적 저장위치   
  
     $file_path = $upload_dir.$real_name;
      

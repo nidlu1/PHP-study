@@ -13,7 +13,11 @@
        $stmh->execute();   
        $pdo->commit();
                 
-       header("Location:http://localhost/shhan/board/board_list.php");
+       ?>
+            <script>
+               location.href = "./board_list.php";               
+           </script>
+<?php
     }
     catch (Exception $ex) {
         $pdo->rollBack();

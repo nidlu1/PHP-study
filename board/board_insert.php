@@ -35,7 +35,8 @@
      */
         $files = $_FILES["upfile"];    //첨부파일	
         $count = count($files["name"]); 
-        $upload_dir = 'C:\xampp\htdocs\shhan\data\\';   //물리적 저장위치. 윈도우는   '를 \'로 해야 인식함.  
+//        $upload_dir = 'C:\xampp\htdocs\shhan\data\\';   //물리적 저장위치. 윈도우는   '를 \'로 해야 인식함.  
+        $upload_dir = '/shhan1/www/data\\';   //물리적 저장위치      //물리적 저장위치. 윈도우는   '를 \'로 해야 인식함.  
         for ($i=0; $i<$count; $i++){
             $upfile_name[$i]     = $files["name"][$i];         //교재 190페이지 참조
             $upfile_tmp_name[$i] = $files["tmp_name"][$i];
@@ -230,6 +231,11 @@
                        
             print "오류: ".$Exception->getMessage();
         } 
-        header("Location:http://localhost/shhan/board/board_list.php");
+//        header("Location:http://localhost/shhan/board/board_list.php");
+        ?>
+            <script>
+               location.href = "./board_list.php";               
+           </script>
+    <?php
     }
     

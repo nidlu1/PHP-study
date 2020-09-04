@@ -75,14 +75,12 @@
 
             $pdo->commit();
 
-            header("Location:http://localhost/shhan/index.php");
         } catch (Exception $exc) {
             $pdo->rollBack();
             echo $exc->getTraceAsString();
         }
     } 
-        
-
-
-
 ?>
+           <script>
+               location.href = "../index.php";               
+           </script>
