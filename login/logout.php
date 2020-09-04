@@ -11,3 +11,6 @@
     
     header("Location:http://localhost/shhan/index.php");
 ?>
+<script>
+    location.href = "../index.php";
+</script>
