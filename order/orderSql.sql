@@ -3,6 +3,7 @@
 create table shhan_buy (
  num int not null auto_increment primary key,
  id varchar(15) ,
+order_id  varchar(15),
  nick varchar(10) ,
  parent int ,
  count int ,
@@ -25,5 +26,6 @@ address2 varchar(50) ,
 tel varchar(50) ,
 zip varchar(20) ,
 email varchar(50) ,
-memo varchar(500)
+memo varchar(500) ,
+ regist_day char(20)
  );
