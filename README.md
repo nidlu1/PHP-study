@@ -9,4 +9,25 @@ sql: mysql
 
 개발패키지: xampp
 
-db설계: https://www.erdcloud.com/d/tMdKDk42KdHbPw5BR
+검색결과를 유지하면서 페이징처리하기.
+
+$sql_search = " where mb_level IN ('1','3') AND mb_leave_date='' ";
+if ($stx) {
+    $sql_search .= " and ( ";
+    switch ($sfl) {
+        case 'mb_point' :
+            $sql_search .= " ({$sfl} >= '{$stx}') ";
+            break;
+        case 'mb_level' :
+            $sql_search .= " ({$sfl} = '{$stx}') ";
+            break;
+        case 'mb_tel' :
+        case 'mb_hp' :
+            $sql_search .= " ({$sfl} like '%{$stx}') ";
+            break;
+        default :
+            $sql_search .= " ({$sfl} like '{$stx}%') ";
+            break;
+    }
+    $sql_search .= " ) ";
+}
