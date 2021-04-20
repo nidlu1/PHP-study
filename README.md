@@ -1,33 +1,12 @@
-# shhan
-php로 만드는 쇼핑몰기본.
-#개발환경
+# 설명
+- 2020.6 ~ 2020.10 동안 독학한 PHP 쇼핑몰 홈페이지
 
-ide: newbeans 12.0
-db: mariaDB
-sql: mysql
-언어: php 7.0
-
-개발패키지: xampp
-
-검색결과를 유지하면서 페이징처리하기.
-
-$sql_search = " where mb_level IN ('1','3') AND mb_leave_date='' ";
-if ($stx) {
-    $sql_search .= " and ( ";
-    switch ($sfl) {
-        case 'mb_point' :
-            $sql_search .= " ({$sfl} >= '{$stx}') ";
-            break;
-        case 'mb_level' :
-            $sql_search .= " ({$sfl} = '{$stx}') ";
-            break;
-        case 'mb_tel' :
-        case 'mb_hp' :
-            $sql_search .= " ({$sfl} like '%{$stx}') ";
-            break;
-        default :
-            $sql_search .= " ({$sfl} like '{$stx}%') ";
-            break;
-    }
-    $sql_search .= " ) ";
-}
+## 개발환경
+- OS : window10
+- 패키지 : xampp
+- 서버 : Apache
+- IDE : netbeans
+- 서버 언어 : PHP
+- DB : mariaDB
+- DB 언어 : Mysql
+- DB Tool : PHPmyadmin
